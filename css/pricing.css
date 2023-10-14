@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient( #000000,  rgb(12, 8, 8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.plans-panel {
+    background-color: white;
+    padding: 15px 25px;
+    width: 80v;
+    height: 90vh;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+  
+}
+
+.plan-header {
+    background-color: #e50914;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 15px auto 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.plan-header:hover {
+    opacity: 0.8;
+}
+
+.pricing-plan:first-child .plan-header {
+    margin: 0 auto 0;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid #ccc;
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.plan-features {
+    margin: 50px 0 25px;
+    color: #1f1a1a;
+}
+
+.plan-features-item {
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+}
+
+.plan-features-item:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.plan-price {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.plan-button {
+    color: #de0914;
+    border: 1px solid #de0914;
+    padding: 15px 35px;
+    margin: 25px 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, transform 0.2s;
+}
+
+.plan-button:hover, .plan-button:focus {
+    background-color: #ffe1e1;
+    transform: translateY(-2px);
+}
+
+/* Some changes to work on large screens */
+@media (min-width: 992px) {
+
+    .plans-panel {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    
+      
+    }
+
+    .plan-header {
+        margin: 0 auto;
+    }
+
+    .pricing-plan {
+        padding: 25px 50px;
+        border-bottom: none;
+        border-right: 1px solid #ccc;
+    }
+
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+
+}

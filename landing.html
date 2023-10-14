@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landing_css/normalize.css">
+    <link rel="stylesheet" href="landing_css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Netflix Movie</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="contenedor ">
+            <h2 class="logotipo">
+                NETFLIX
+            </h2>
+            <nav>
+                
+                <a href="#" >Search</a>
+                <a href="#" class="active">Genres</a>
+                <a href="#">My List</a>
+                <a href="#">Settings</a>
+                <a href="index.html">Logout</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-movie">
+            <div class="contenedor">
+                <h3 class="title">Adipurush</h3>
+                <p class="description"> Indian epic mythological film based on the "Ramayana," featuring Prabhas as Lord Rama and Saif Ali Khan as the antagonist.
+                </p>
+                <button role="button" class="button"> <i class="fas fa-play"></i> Replay</button>
+                <button role="button" class="button"> <i class="fas fa-info-circle"></i>Show Information</button>
+            </div>
+        </div>
+        <div class="recomended-movies contenedor">
+            <div class="contenedor-title-controls">
+                <h3>Similar Recommendations</h3>
+                <div class="indicators">
+                </div>
+            </div>
+            <div class="main-container">
+                <button role="button" id="left-arrow" class="left-arrow"><i class="fas fa-angle-left"></i></button>
+
+                <div class="contenedor-carrousel">
+                    <div class="carrousel">
+                        <div class="movie">
+                            <a href="#"><img src="img/1.Inception.jpg" alt="inception movie"></a>
+                        </div>
+                        <div class="movie">
+                            <a href="#"><img src="img/2.Dunkirk.jpg" alt="dunkirk movie"></a>
+                        </div>
+                        <div class="movie">
+                            <a href="#"><img src="img/3.Dune.jpg" alt="dune movie"></a>
+                        </div>
+                        <div class="movie">
+                            <a href="#"><img src="img/4.No_Time _To _Die.jpg" alt="no time to die movie"></a>
+                        </div>
+                        <div class="movie">
+                            <a href="#"><img src="img/5.Ad_Astra.jpg" alt="ad astra movie"></a>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <button role="button" id="right-arrow" class="right-arrow"><i class="fas fa-angle-right"></i></button>
+
+            </div>
+        </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://kit.fontawesome.com/027ad8f504.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

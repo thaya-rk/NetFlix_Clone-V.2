@@ -1,0 +1,237 @@
+:root {
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 30px;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #FFF;
+}
+
+
+/* ----Main Movie */
+
+.main-movie {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #ffffff;
+    background: linear-gradient(rgb(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50)100%), url("../img/displayimg.jpg");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-movie .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.main-movie .title {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.main-movie .description {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.main-movie .button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.32em;
+    padding: 0.93em 1.87em;
+    color: #ffffff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    font-size: 1.12em;
+}
+
+.main-movie .button:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+.main-movie .button i {
+    margin-right: 0.9em;
+}
+
+
+/* --- Title container and controls */
+
+.contenedor-title-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contenedor-title-controls h3 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.contenedor-title-controls .indicators button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-left: 2px;
+}
+
+.contenedor-title-controls .indicators button:hover,
+.contenedor-title-controls .indicators button.active {
+    background: #e50914;
+}
+
+
+/* ---Main container and arrows */
+
+.recomended-movies {
+    margin-bottom: 1.25em;
+}
+
+.recomended-movies .main-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.recomended-movies .main-container .left-arrow,
+.recomended-movies .main-container .right-arrow {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.recomended-movies .main-container .left-arrow:hover,
+.recomended-movies .main-container .right-arrow:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.recomended-movies .main-container .left-arrow {
+    left: 0;
+}
+
+.recomended-movies .main-container .right-arrow {
+    right: 0;
+}
+
+
+/* Carrousel */
+
+.recomended-movies .contenedor-carrousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.recomended-movies .contenedor-carrousel .carrousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.recomended-movies .contenedor-carrousel .carrousel .movie {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.recomended-movies .contenedor-carrousel .carrousel .movie.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.recomended-movies .contenedor-carrousel .carrousel .movie img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/* --- Media queries / Mobile  */
+
+@media screen and (max-width: 800px) {
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-movie {
+        font-size: 14px;
+    }
+    .main-movie .description {
+        max-width: 100%;
+    }
+    .recomended-movies .contenedor-carrousel {
+        overflow: visible;
+    }
+    .recomended-movies .contenedor-carrousel .carrousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .recomended-movies .indicators,
+    .recomended-movies .left-arrow,
+    .recomended-movies .right-arrow {
+        display: none;
+    }
+}
